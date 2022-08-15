@@ -28,14 +28,6 @@ class CRUD:
         cur.close()
         return datos
 
-    def buscar_pais(self, Id):
-        cur = self.cnn.cursor()
-        sql = "SELECT * FROM pais WHERE id = {}".format(Id)
-        cur.execute(sql)
-        datos = cur.fetchone()
-        cur.close()
-        return datos
-
     def inserta_pais(self, ISO3, NombrePais, Ciudad, Moneda):
         cur = self.cnn.cursor()
         sql = '''INSERT INTO pais (ISO3, nombre_pais, ciudad, moneda_corriente) 

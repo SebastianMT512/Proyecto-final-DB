@@ -160,7 +160,7 @@ class Ventana(Frame):
         self.txtPais = Entry(frame2)
         self.txtPais.place(x=3, y=65, width=120, height=20)
 
-        lbl3 = Label(frame2, text="Capital: ", bg="#FFC872")
+        lbl3 = Label(frame2, text="Ciudad: ", bg="#FFC872")
         lbl3.place(x=2, y=85)
 
         self.txtCiu = Entry(frame2)
