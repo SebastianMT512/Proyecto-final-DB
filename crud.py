@@ -38,7 +38,7 @@ class CRUD:
 
     def inserta_pais(self, ISO3, NombrePais, Ciudad, Moneda):
         cur = self.cnn.cursor()
-        sql = '''INSERT INTO pais (ISO3, nombre_pais, ciudad_id, moneda_corriente) 
+        sql = '''INSERT INTO pais (ISO3, nombre_pais, ciudad, moneda_corriente) 
         VALUES('{}', '{}', '{}', '{}')'''.format(ISO3, NombrePais, Ciudad, Moneda)
         cur.execute(sql)
         n = cur.rowcount
@@ -57,7 +57,7 @@ class CRUD:
 
     def modifica_pais(self, Id, ISO3, NombrePais, Ciudad, Moneda):
         cur = self.cnn.cursor()
-        sql = '''UPDATE pais SET ISO3='{}', nombre_pais='{}', ciudad_id='{}',
+        sql = '''UPDATE pais SET ISO3='{}', nombre_pais='{}', ciudad='{}',
         moneda_corriente='{}' WHERE Id={}'''.format(ISO3, NombrePais, Ciudad, Moneda, Id)
         cur.execute(sql)
         n = cur.rowcount
